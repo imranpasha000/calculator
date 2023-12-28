@@ -2,230 +2,98 @@
 
 <html lang="en">
 
-<head>
+  <head>
 
-  <meta charset="UTF-8">
+    <meta charset="UTF-8" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <title>Survey Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <style>
+    <link rel="stylesheet" href="Style.css" />
 
-    body {
+    <title>Calculator - By Code Traversal</title>
 
-      font-family: Arial, sans-serif;
+  </head>
 
-      margin: 20px;
+  <body>
 
-      background-color: aliceblue;
+    <div class="container">
 
-    }
+      <div class="calculator">
 
-    form {
+        <input type="text" id="inputBox" placeholder="0" />
 
-      max-width: 400px;
+        <div>
 
-      margin: 0 auto;
+          <button class="button operator">AC</button>
 
-    }
+          <button class="button operator">DEL</button>
 
-    label {
+          <button class="button operator">%</button>
 
-      display: block;
+          <button class="button operator">/</button>
 
-      margin-bottom: 8px;
+        </div>
 
-    }
+        <div>
 
-    input, select {
+          <button class="button">7</button>
 
-      width: 100%;
+          <button class="button">8</button>
 
-      padding: 8px;
+          <button class="button">9</button>
 
-      margin-bottom: 12px;
+          <button class="button operator">*</button>
 
-      box-sizing: border-box;
+        </div>
 
-    }
+        <div>
 
-    button {
+          <button class="button">4</button>
 
-      padding: 10px;
+          <button class="button">5</button>
 
-      background-color: #4CAF50;
+          <button class="button">6</button>
 
-      color: white;
+          <button class="button operator">-</button>
 
-      border: none;
+        </div>
 
-      cursor: pointer;
+        <div>
 
-    }
+          <button class="button">1</button>
 
-    button:hover {
+          <button class="button">2</button>
 
-      background-color: #45a049;
+          <button class="button">3</button>
 
-    }
+          <button class="button operator">+</button>
 
-  </style>
-
-</head>
-
-<body>
+        </div>
 
  
 
-<form id="surveyForm">
+        <div>
 
-  <label for="firstName">First Name:</label>
+          <button class="button">00</button>
 
-  <input type="text" id="firstName" required>
+          <button class="button">0</button>
 
- 
+          <button class="button">.</button>
 
-  <label for="lastName">Last Name:</label>
+          <button class="button equalBtn">=</button>
 
-  <input type="text" id="lastName" required>
+        </div>
 
- 
+      </div>
 
-  <label for="dob">Date of Birth:</label>
-
-  <input type="date" id="dob" required>
+    </div>
 
  
 
-  <label for="country">Country:</label>
+    <script src="script.js"></script>
 
-  <select id="country" required>
-
-    <option value="USA">USA</option>
-
-    <option value="Canada">Canada</option>
-
-    <!-- Add more options as needed -->
-
-  </select>
-
- 
-
-  <label>Gender:</label>
-
-  <input type="checkbox" id="male" name="gender" value="Male"> <label for="male">Male</label>
-
-  <input type="checkbox" id="female" name="gender" value="Female"> <label for="female">Female</label>
-
- 
-
-  <label for="profession">Profession:</label>
-
-  <input type="text" id="profession" required>
-
- 
-
-  <label for="email">Email:</label>
-
-  <input type="email" id="email" required>
-
- 
-
-  <label for="mobile">Mobile Number:</label>
-
-  <input type="tel" id="mobile" required>
-
- 
-
-  <button type="button" onclick="submitForm()">Submit</button>
-
-  <button type="button" onclick="resetForm()">Reset</button>
-
-</form>
-
- 
-
-<script>
-
-  function submitForm() {
-
-    // Validate form fields
-
-    var firstName = document.getElementById('firstName').value;
-
-    var lastName = document.getElementById('lastName').value;
-
-    var dob = document.getElementById('dob').value;
-
-    var country = document.getElementById('country').value;
-
-    var gender = document.querySelector('input[name="gender"]:checked');
-
-    var profession = document.getElementById('profession').value;
-
-    var email = document.getElementById('email').value;
-
-    var mobile = document.getElementById('mobile').value;
-
- 
-
-    // Perform necessary validations (add more as needed)
-
-    if (!firstName || !lastName || !dob || !country || !gender || !profession || !email || !mobile) {
-
-      alert('Please fill in all the required fields.');
-
-      return;
-
-    }
-
- 
-
-    // Display popup with selected values
-
-    var message = "Submitted Values:\n";
-
-    message += "First Name: " + firstName + "\n";
-
-    message += "Last Name: " + lastName + "\n";
-
-    message += "Date of Birth: " + dob + "\n";
-
-    message += "Country: " + country + "\n";
-
-    message += "Gender: " + gender.value + "\n";
-
-    message += "Profession: " + profession + "\n";
-
-    message += "Email: " + email + "\n";
-
-    message += "Mobile Number: " + mobile + "\n";
-
- 
-
-    alert(message);
-
- 
-
-    // Reset the form
-
-    resetForm();
-
-  }
-
- 
-
-  function resetForm() {
-
-    document.getElementById('surveyForm').reset();
-
-  }
-
-</script>
-
- 
-
-</body>
+  </body>
 
 </html>
